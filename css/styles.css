@@ -1,13 +1,24 @@
 :root {
-  --white-color: #ffffff;
-  --black-color: #212121;
-  --gray-color: #757575;
-  --ash-color: #f5f4fa;
-  --light-gray-color: rgba(255, 255, 255, 0.6);
-  --dark-gray-color: #2f303a;
+
+  
+  --icons-gray: #afb1b8;
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #212121;
+  --third-color: #757575;
+
+  --contacts-color: rgba(255, 255, 255, 0.6); 
+  --background-secondary-color: #f5f4fa;
+  --background-color: #2f303a;
+
   --accent-color: #2196f3;
   --btn-hover-color: #188ce8;
-  --icons-gray: #afb1b8;
+  --icons-color: #afb1b8;
 
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-time: 250ms;
@@ -49,7 +60,7 @@ ul {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 img {
@@ -83,7 +94,7 @@ button {
 
 /* .............LOGO................ */
 
-.header-logo,
+.header__logo,
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -93,7 +104,7 @@ button {
   color: var(--accent-color);
 }
 
-.header-logo {
+.header__logo {
   display: block;
   padding-top: 24px;
   padding-bottom: 25px;
@@ -106,7 +117,7 @@ button {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .footer-studio-logo {
@@ -115,7 +126,7 @@ button {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 /* ----------------------- STUDIO --------------------- */
@@ -127,17 +138,17 @@ button {
 }
 
 .main-nav,
-.header-list {
+.header__list {
   display: flex;
   align-items: center;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   margin-right: auto;
 }
 
-.header-link.current:after {
+.header__link.current:after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -150,11 +161,11 @@ button {
   border-radius: 2px;
 }
 
-.header-item:not(:last-child) {
+.header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-link {
+.header__link {
   transition: color var(--transition-time) var(--cubic);
 
   position: relative;
@@ -164,34 +175,34 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
-.header-contact {
+.header-contact__list {
   display: flex;
 }
 
-.header-contact-item:not(:last-child) {
+.header-contact__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-contact-item {
+.header-contact__item {
   display: flex;
   align-items: center;
 }
 
-.header-link:hover,
-.header-link:focus,
+.header__link:hover,
+.header__link:focus,
 .header-mail:hover,
 .header-mail:focus,
 .header-tel:hover,
 .header-tel:focus,
-.header-list .link.current {
+.header__list .link.current {
   color: var(--accent-color);
 }
 
-.header-link:hover,
-.header-link:focus,
+.header__link:hover,
+.header__link:focus,
 .header-mail:hover,
 .header-mail:focus,
 .header-tel:hover,
@@ -209,11 +220,11 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--gray-color);
+  color: var(--third-color);
 }
 
-.mail-icon,
-.tel-icon {
+.mail__icon,
+.tel__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -224,7 +235,7 @@ button {
   margin-left: auto;
   margin-right: auto;
 
-  background-color: var(--dark-gray-color);
+  background-color: var(--background-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -241,7 +252,7 @@ button {
   padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -253,10 +264,10 @@ button {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
-.hero-btn {
+.hero__btn {
   transition: background-color var(--transition-time) var(--cubic);
 
   display: flex;
@@ -273,14 +284,14 @@ button {
   letter-spacing: 0.06em;
 
   background-color: var(--accent-color);
-  color: var(--white-color);
+  color: var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: var(--btn-hover-color);
 }
 
@@ -324,7 +335,7 @@ button {
   min-height: 581px;
   min-width: 528px;
 
-  background: var(--white-color);
+  background: var(--primary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -339,7 +350,7 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .modal-form-field {
@@ -359,7 +370,7 @@ button {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  color: var(--gray-color);
+  color: var(--third-color);
 
   font-size: 16px;
   line-height: 1.16
@@ -406,7 +417,7 @@ button {
   line-height: 1.16
   letter-spacing: 0.01em;
 
-  color: var(--gray-color);
+  color: var(--third-color);
 }
 
 .feedback-txt {
@@ -437,13 +448,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-color);
+  color: var(--third-color);
 }
 
 .terms-check span {
   width: 16px;
   height: 15px;
-  border: 2px solid var(--black-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 2px;
 
   transition: background-color var(--transition-time) var(--cubic), border var(--transition-time) var(--cubic);
@@ -466,7 +477,7 @@ button {
 
 
 .modal-check:checked + .terms-check span .icon-check {
-  fill: var(--white-color);
+  fill: var(--primary-color);
 }
 
 
@@ -493,7 +504,7 @@ button {
   border-radius: 4px;
   border: none;
 
-  color: var(--white-color);
+  color: var(--primary-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -516,8 +527,8 @@ button {
   width: 30px;
   height: 30px;
 
-  color: var(--black-color);
-  background: var(--white-color);
+  color: var(--secondary-color);
+  background: var(--primary-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
@@ -560,24 +571,24 @@ button {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .about-item-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--gray-color);
+  color: var(--third-color);
 }
 
-.icon-box {
+.about-icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
-  background-color: var(--ash-color);
+  background-color: var(--background-secondary-color);
 }
 
 /* .............WHAT WE DO................ */
@@ -594,7 +605,7 @@ button {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .we-do-list {
@@ -634,13 +645,13 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 /* .............TEAM................ */
 
 .team {
-  background-color: var(--ash-color);
+  background-color: var(--contacts-color);
 }
 
 .team-title {
@@ -651,7 +662,7 @@ button {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .team-list {
@@ -661,7 +672,7 @@ button {
 .team-item {
   flex-basis: calc((100% - 60px) / 4);
 
-  background-color: var(--white-color);
+  background-color: var(--primary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -683,7 +694,7 @@ button {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .team-job {
@@ -692,7 +703,7 @@ button {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--gray-color);
+  color: var(--third-color);
 }
 
 .team-social-list {
@@ -728,13 +739,13 @@ button {
 
 .team-social-link:hover .team-social-icon,
 .team-social-link:focus .team-social-icon {
-  fill: var(--white-color);
+  fill: var(--primary-color);
 }
 
 .team-social-icon {
   transition: fill var(--transition-time) var(--cubic);
 
-  fill: var(--icons-gray);
+  fill: var(--icons-color);
 }
 
 /* .............CLIENTS................ */
@@ -747,7 +758,7 @@ button {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .clients-list {
@@ -775,8 +786,8 @@ button {
   width: 170px;
   height: 92px;
 
-  color: var(--icons-gray);
-  border: 1px solid var(--icons-gray);
+  color: var(--icons-color);
+  border: 1px solid var(--icons-color);
   border-radius: 4px;
 }
 
@@ -795,7 +806,7 @@ button {
 /* .............FOOTER................ */
 
 .footer {
-  background-color: var(--dark-gray-color);
+  background-color: var(--background-color);
 }
 
 .footer {
@@ -830,7 +841,7 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .footer-mail,
@@ -841,7 +852,7 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--light-gray-color);
+  color: var(--contacts-color);
 }
 
 .footer-mail:hover,
@@ -863,7 +874,7 @@ button {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .social-footer-list {
@@ -898,7 +909,7 @@ button {
 }
 
 .social-footer-icon {
-  fill: var(--white-color);
+  fill: var(--primary-color);
 }
 
 .sign-up-form {
@@ -915,7 +926,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .sign-up-input {
@@ -924,7 +935,7 @@ button {
   padding: 15px 16px;
   margin-right: 12px;
 
-  color: var(--white-color);
+  color: var(--primary-color);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -953,7 +964,7 @@ button {
 }
 
 .sign-up-input:focus::placeholder {
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .sign-up-btn {
@@ -974,7 +985,7 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  color: var(--white-color);
+  color: var(--primary-color);
 
   transition: background-color var(--transition-time) var(--cubic);
 }
@@ -987,7 +998,7 @@ button {
 .sign-up-icon {
   margin-left: 10px;
 
-  fill: var(--white-color);
+  fill: var(--primary-color);
 }
 
 
@@ -1023,14 +1034,14 @@ button {
   outline: none;
   border: none;
 
-  color: var(--black-color);
-  background-color: var(--ash-color);
+  color: var(--secondary-color);
+  background-color: var(--background-secondary-color);
 }
 
 .products-nav-btn:hover,
 .products-nav-btn:focus,
 .products-nav .products-nav-btn.current-btn {
-  color: var(--white-color);
+  color: var(--primary-color);
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1099,7 +1110,7 @@ button {
   line-height: 1.56;
   letter-spacing: 0.03em;
 
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .products-overlay,
@@ -1130,7 +1141,7 @@ button {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--black-color);
+  color: var(--secondary-color);
 }
 
 .products-item-text {
@@ -1138,5 +1149,5 @@ button {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  color: var(--gray-color);
+  color: var(--third-color);
 }
