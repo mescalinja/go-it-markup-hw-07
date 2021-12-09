@@ -4,9 +4,7 @@
 
 .about__item {
     flex-basis: calc((100% - 60px) / 4);
-}
 
-.about__item {
     &:not(:last-child) {
         margin-right: 30px;
     }

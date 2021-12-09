@@ -20,9 +20,7 @@
 .social-footer__item {
     width: 44px;
     height: 44px;
-}
 
-.social-footer__item {
     &:not(:last-child) {
         margin-right: 10px;
     }
@@ -45,8 +43,6 @@
         background-color: var(--accent-color);
     }
 }
-
-.social-footer__link
 
 .social-footer__icon {
     fill: var(--primary-color);

@@ -56,18 +56,14 @@
 
 .modal__form-field {
     margin-bottom: 10px;
-}
 
-.modal__form-field {
-    &:nth-child(4n) {
-    margin-bottom: 18px;
-    }
-}
-
-.modal__form-field {
     &:nth-child(5n) {
-    margin-bottom: 32px;
-}
+        margin-bottom: 32px;
+        }
+
+    &:nth-child(4n) {
+        margin-bottom: 18px;
+    }
 }
 
 .modal__input,
@@ -132,7 +128,7 @@
     resize: none;
 
     &:focus {
-    border-color: var(--accent-color);
+        border-color: var(--accent-color);
 }
 
     &::placeholder {
@@ -185,9 +181,6 @@
         fill: var(--primary-color);
     }
 }
-
-
-.modal__check
 
 
 .terms__link {

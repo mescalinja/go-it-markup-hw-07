@@ -31,28 +31,26 @@
     transition: border-color var(--transition-time) var(--cubic);
 
     cursor: pointer;
-}
 
-.sign-up__input {
-    &::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.03em;
+     &::placeholder {
+         font-size: 16px;
+         line-height: 1.25;
+         display: flex;
+         align-items: center;
+         letter-spacing: 0.03em;
 
-        color: rgba(255, 255, 255, 0.6);
+         color: rgba(255, 255, 255, 0.6);
 
-        transition: color var(--transition-time) var(--cubic);
-    }
+         transition: color var(--transition-time) var(--cubic);
+     }
 
-    &:focus {
-        border-color: var(--accent-color);
-    }
+     &:focus {
+         border-color: var(--accent-color);
+     }
 
-    &:focus::placeholder {
-        color: var(--primary-color);
-    }
+     &:focus::placeholder {
+         color: var(--primary-color);
+     }
 }
 
 .sign-up__btn {
