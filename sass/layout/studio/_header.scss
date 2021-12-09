@@ -14,7 +14,6 @@
     }
 }
 
-
 .header__nav {
     display: flex;
     margin-right: auto;
@@ -62,14 +61,12 @@
 }
 
 .header-contact__item {
+    display: flex;
+    align-items: center;
+
     &:not(:last-child) {
         margin-right: 50px;
     }
-}
-
-.header-contact__item {
-    display: flex;
-    align-items: center;
 }
 
 .header-mail__link,
