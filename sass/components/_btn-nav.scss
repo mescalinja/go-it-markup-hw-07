@@ -1,20 +1,4 @@
-.products__nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.products-nav__item {
-    &:not(:last-child) {
-        margin-right: 8px;
-    }
-}
-
 .btn-nav {
-    transition: background-color var(--transition-time) var(--cubic),
-        color var(--transition-time) var(--cubic),
-        box-shadow var(--transition-time) var(--cubic);
-
     padding: 6px 22px 6px 22px;
 
     font-family: inherit;
@@ -29,6 +13,10 @@
 
     color: var(--secondary-color);
     background-color: var(--background-secondary-color);
+
+    transition: background-color var(--transition-time) var(--cubic),
+    color var(--transition-time) var(--cubic),
+    box-shadow var(--transition-time) var(--cubic);
 
     &:hover,
     &:focus {

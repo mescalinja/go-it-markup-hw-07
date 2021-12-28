@@ -35,17 +35,14 @@
         opacity var(--transition-time) var(--cubic);
 }
 
-.products__item
 .products__item {
     &:hover .products__overlay,
     &:hover .products-overlay__text {
         transform: translateY(0);
         opacity: 1;
-        }
-    
+    }
 }
 
-.products__link,
 .products__link {
     &:focus .products__overlay,
     &:focus .products-overlay__text {

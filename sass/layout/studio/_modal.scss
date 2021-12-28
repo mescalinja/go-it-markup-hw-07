@@ -129,7 +129,7 @@
 
     &:focus {
         border-color: var(--accent-color);
-}
+    }
 
     &::placeholder {
         font-size: 14px;
@@ -162,6 +162,7 @@
 
     display: flex;
     margin-right: 6px;
+    }
 }
 
 
@@ -173,15 +174,14 @@
 
 
 .modal__check {
-    :checked+.terms__check span {
+    &:checked+.terms__check span {
         background-color: var(--accent-color);
         border: none;
     }
-    :checked+.terms__check span .icon__check {
+    &:checked+.terms__check span .icon__check {
         fill: var(--primary-color);
     }
 }
-
 
 .terms__link {
     font-size: 14px;
@@ -195,30 +195,8 @@
 }
 
 .submit__btn {
-    display: flex;
     margin: auto auto;
     padding: 10px 55px;
-    align-items: center;
-    text-align: center;
-
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-
-    color: var(--primary-color);
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-
-    transition: background-color var(--transition-time) var(--cubic);
-
-    &:hover,
-    &:focus {
-    background-color: var(--btn-hover-color);
-        }
 }
 
 .modal-close__btn {
@@ -247,6 +225,6 @@
 
     &:hover,
     &:focus {
-        color: var(--accent-color);
-    }
+        color: var(--accent-color);}
+    
 }

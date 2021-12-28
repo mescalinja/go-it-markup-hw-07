@@ -9,9 +9,7 @@
 }
 
 .header__list {
-    &.link.current {
-        color: var(--accent-color);
-    }
+
 }
 
 .header__nav {
@@ -39,6 +37,10 @@
 
     &:hover,
     &:focus {
+        color: var(--accent-color);
+    }
+
+    &.current {
         color: var(--accent-color);
     }
 
@@ -81,7 +83,7 @@
     letter-spacing: 0.02em;
     color: var(--third-color);
 
-    &:hover.
+    &:hover,
     &:focus {
         color: var(--accent-color);
     }
